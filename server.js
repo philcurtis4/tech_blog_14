@@ -15,6 +15,9 @@ const PORT = 3001;
 //Create a get route for files in public
 app.use(express.static('./public'));
 
+//Allow url encoded
+app.use(express.urlencoded({extended: false}));
+
 //Load in Handlebars
 app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');

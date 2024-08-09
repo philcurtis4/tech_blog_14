@@ -21,17 +21,17 @@
 					Tech Blog
 				</a>
 				<div>
-					<a class="navbar-brand text-light" href="/register">Register</a>
-					<a class="navbar-brand text-light" href="/login">Login</a>
+
+					{{#if user}}
+						<p>Welcome, {{user.username}}</p>
+						<a href="/logout">Log Out</a>
+					{{else}}
+					<a class="navbar-brand text-light {{#if register}}active{{/if}}" href="/register">Register</a>
+					<a class="navbar-brand text-light {{#if login}}active{{/if}}" href="/login">Login</a>
+					{{/if}}
 				</div>
 			</div>
 		</nav>
-
-		{{!-- <nav>
-			<a href="/login">Log In</a>
-			<span>or</span>
-			<a href="/register">Register</a>
-		</nav> --}}
 	</header>
 
 	{{{body}}}

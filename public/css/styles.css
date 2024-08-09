@@ -32,6 +32,16 @@ input {
 	width: 100%;
 }
 
+nav a {
+	text-decoration: none;
+}
+
+nav a.active, nav a:hover {
+	text-decoration: underline;
+}
+
+
+
 /*Global Classes*/
 
 .text-center {
