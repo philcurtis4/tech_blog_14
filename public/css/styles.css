@@ -1,0 +1,39 @@
+/* RESETS */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	background-color: rgb(49, 49, 49);
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	margin: 10px auto;
+	padding: 20px;
+	background-color: rgb(146, 50, 146);
+	width: 400px;
+	border-radius: 10px;
+}
+
+input {
+	margin: 2px auto;
+	padding: 3px;
+	width: 100%;
+}
+
+/*Global Classes*/
+
+.text-center {
+	text-align: center;
+}
