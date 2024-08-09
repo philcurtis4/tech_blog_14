@@ -21,4 +21,4 @@ const User = client.define('User', {
 
 });
 
-modules.exports = User;
+module.exports = User;
