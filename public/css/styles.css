@@ -4,11 +4,32 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: sans-serif;
 }
 
 body {
 	height: 100%;
 	background-color: rgb(49, 49, 49);
+	background-image: url('../images/6106991.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.homepage-container{
+	margin: 20px auto;
+	width: 600px;
+	border-radius: 10px;
+}
+
+.homepage-container h1 {
+	font-size: 3rem;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+	
 }
 
 .navbar {
@@ -40,6 +61,25 @@ nav a.active, nav a:hover {
 	text-decoration: underline;
 }
 
+.blog-container {
+	background-color: rgb(126, 31, 170);
+	margin: 5px auto;
+	border-radius: 3px;
+	width: 92rem;
+}
+
+.blog-content{
+	background-color: rgb(104, 103, 105);
+}
+
+.title {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title p, .title h3 {
+	margin: auto 0
+}
 
 
 /*Global Classes*/
