@@ -20,10 +20,10 @@ module.exports = {
 			attributes: ['email', 'username']
 		})
 
-		res.render('dashboard'), {
+		res.render('dashboard', {
 			title: 'Tech Blog - Dashbaord',
 			user: user.get({plain: true}),
-		}
+		})
 	},
 
 	showLoginPage (req, res) {

@@ -23,8 +23,10 @@
 				<div>
 
 					{{#if user}}
-						<p>Welcome, {{user.username}}</p>
-						<a href="/logout">Log Out</a>
+					<div class="d-flex me-2">
+						<p class=" ms-4 mt-2">Welcome, {{user.username}}</p>
+						<a class=" ms-4 mt-2" href="/logout">Log Out</a>
+					</div>
 					{{else}}
 					<a class="navbar-brand text-light {{#if register}}active{{/if}}" href="/register">Register</a>
 					<a class="navbar-brand text-light {{#if login}}active{{/if}}" href="/login">Login</a>

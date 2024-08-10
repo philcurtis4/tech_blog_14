@@ -43,7 +43,7 @@ app.use('/', [view_routes, user_routes]);
 
 //Start server
 
-client.sync({force: false})
+client.sync({force: true})
 	.then(() => {
 		app.listen(PORT, () => {
 			console.log('Server started on port', PORT);
