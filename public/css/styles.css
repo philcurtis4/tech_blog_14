@@ -22,7 +22,7 @@ body {
 	border-radius: 10px;
 }
 
-.homepage-container h1 {
+/* .homepage-container h1 {
 	font-size: 3rem;
   font-weight: 600;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
@@ -30,7 +30,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
 	
-}
+} */
 
 .navbar {
     margin: 0;
@@ -42,7 +42,7 @@ body {
 	flex-direction: column;
 	margin: 10px auto;
 	padding: 20px;
-	background-color: rgb(146, 50, 146);
+	
 	width: 400px;
 	border-radius: 10px;
 }
@@ -62,7 +62,7 @@ nav a.active, nav a:hover {
 }
 
 .blog-container {
-	background-color: rgb(126, 31, 170);
+	background-color: rgb(146, 24, 202);
 	margin: 5px auto;
 	border-radius: 3px;
 	width: 92rem;
@@ -81,6 +81,13 @@ nav a.active, nav a:hover {
 	margin: auto 0
 }
 
+.create-post-button .btn {
+	margin: 0 auto;
+}
+
+#create-button {
+	width: 300px;
+}
 
 /*Global Classes*/
 
