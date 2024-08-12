@@ -16,7 +16,7 @@ module.exports = {
 
 	async loginUser(req, res) {
 		const formData = req.body;
-
+		
 		const user = await User.findOne({
 			where: {
 				email: formData.email
@@ -43,6 +43,8 @@ module.exports = {
 		req.session.destroy();
 
 		res.redirect('/');
-	}
+	},
+
+	
 };
 
