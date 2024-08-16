@@ -15,8 +15,11 @@ router.get('/login', redirectUser, view_controller.showLoginPage);
 //Dashboard route
 router.get('/dashboard', redirectGuest, view_controller.showDashboardPage);
 
-//Post Blog route
+//Create Blog route
 router.get('/blog', redirectGuest, view_controller.showBlogPostPage);
+
+//Show single blog post
+router.get('/post', view_controller.showSingleBlogPost)
 
 //Edit Blog Post
 router.get('/blog/:postId', view_controller.showEditBlogPost);

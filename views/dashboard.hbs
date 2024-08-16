@@ -1,8 +1,8 @@
 {{#each user.Blogs}}
-{{!-- <a href=""></a> --}}
+
 <section class="mt-5 text-bg-dark pt-2 pb-2 ms-2 me-2 mt-2 border border-3">
 	<div class="title d-flex column  ">
-		<h3 class="ms-4">{{title}}</h3>
+		<a href="/post"><h3 class="ms-4">{{title}}</h3></a>
 		<p class="me-4">{{createdAt}}</p>
 		<div class="d-flex">
 			{{!-- make an anchor tag inseat to take to edit hbs --}}

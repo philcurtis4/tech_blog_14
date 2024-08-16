@@ -79,5 +79,10 @@ module.exports = {
 
 	},
 
+	async showSingleBlogPost (req, res) {
+
+		res.render('post');
+	}
+
 
 }
