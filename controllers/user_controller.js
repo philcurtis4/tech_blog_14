@@ -30,12 +30,12 @@ module.exports = {
 		const valid_pass = await user.validatePassword(formData.password);
 
 		if(!valid_pass){
-			res.redirect('/login');
+			return res.redirect('/login');
 		}
 
 		req.session.user_id = user.id;
 
-		res.redirect('dashboard');
+		res.redirect('/dashboard');
 
 	},
 

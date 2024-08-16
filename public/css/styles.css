@@ -63,9 +63,9 @@ nav a.active, nav a:hover {
 
 .blog-container {
 	background-color: rgb(146, 24, 202);
-	margin: 5px auto;
+	margin: 0.5rem auto;
 	border-radius: 3px;
-	width: 92rem;
+	width: 97%;
 }
 
 .blog-content{

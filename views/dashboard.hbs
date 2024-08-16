@@ -1,8 +1,18 @@
 {{#each user.Blogs}}
+{{!-- <a href=""></a> --}}
 <section class="mt-5 text-bg-dark pt-2 pb-2 ms-2 me-2 mt-2 border border-3">
 	<div class="title d-flex column  ">
 		<h3 class="ms-4">{{title}}</h3>
 		<p class="me-4">{{createdAt}}</p>
+		<div class="d-flex">
+			{{!-- make an anchor tag inseat to take to edit hbs --}}
+			<a href="/blog/{{id}}" class="edit-button btn btn-light me-2 px-4">Edit</a>
+			
+			<form action="/blog/{{id}}?_method=DELETE" method="POST">
+				<button class="btn btn-danger me-2">Delete</button>
+			</form>
+		</div>
+		
 	</div>
 </section>
 
@@ -11,5 +21,5 @@
 
 
 <div class="d-flex create-post-button">
-	<a href="/blog" type="button" class="btn btn-light pt-1 pb-1 ps-4 pe-4 mt-3" id="create-button">+ Create Blog Post</a>
+	<a href="/blog" type="button" class="btn btn-light pt-1 pb-1 ps-4 pe-4 mt-5" id="create-button">+ Create Blog Post</a>
 </div>

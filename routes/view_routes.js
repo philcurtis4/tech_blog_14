@@ -18,4 +18,7 @@ router.get('/dashboard', redirectGuest, view_controller.showDashboardPage);
 //Post Blog route
 router.get('/blog', redirectGuest, view_controller.showBlogPostPage);
 
+//Edit Blog Post
+router.get('/blog/:postId', view_controller.showEditBlogPost);
+
 module.exports = router;

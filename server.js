@@ -3,6 +3,7 @@ const express = require('express');
 const session = require('express-session');
 SequelizeStore = require("connect-session-sequelize")(session.Store);
 const { engine } = require('express-handlebars');
+const methodOverride = require('method-override')
 
 const client = require('./config/connection');
 const view_routes = require('./routes/view_routes');
@@ -15,6 +16,9 @@ const PORT = 3001;
 
 //Create a get route for files in public
 app.use(express.static('./public'));
+
+//Allow all request types through forms
+app.use(methodOverride('_method'))
 
 //Allow url encoded
 app.use(express.urlencoded({extended: false}));
@@ -41,6 +45,7 @@ app.use(
 
 //Load in Routes
 app.use('/', [view_routes, user_routes, blog_routes]);
+
 
 //Start server
 
