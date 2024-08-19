@@ -1,4 +1,5 @@
-const { Blog } = require('../models');
+const { Blog, Comment, User } = require('../models');
+
 
 module.exports ={
 	async createBlog (req, res) {
@@ -32,6 +33,26 @@ module.exports ={
 			console.error(error);
         //redirect to a page watch video about session errors
 		}
+	},
+
+	async addComment (req, res) {
+		//grab post id
+		const postId = req.params.postId;
+		//grab comment
+		const comment = req.body.comment;
+		const userId =  req.session.user_id;
+		// console.log(req.body)
+		const user = await User.findByPk(userId);
+		
+		console.log(user.username)
+		await Comment.create({
+			BlogId: postId,
+			comment: comment,
+			username: user.username,
+		});
+		
+		res.redirect('/');
+
 	},
 
 	async deleteBlogPost (req, res) {

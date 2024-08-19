@@ -6,7 +6,7 @@
 		<div class="d-flex column title border border-dark border-3">
 			<h3 class="ms-4">{{title}}</h3>
 			<div class="d-flex column">
-				<p class="me-4"><span class="me-2">Written By</span>{{'User.username'}}</p>
+				<p class="me-4"><span class="me-2">Written By</span>{{User.username}}</p>
 				<span class="me-4"> - </span>
 				<p class="me-4">{{createdAt}}</p>
 			</div>
@@ -15,8 +15,29 @@
 		
 		<div class="blog-content border border-dark border-3">
 			<p class="ms-3 mt-2">{{content}}</p>
-			
 		</div>
+	</div>
+
+	<div id="comment">
+		{{!-- comment inserted here --}}
+		{{#each Comments}}
+			<div class="d-flex  justify-content-between border border-dark border-3 ms-5 me-5 align-items-center">
+				<div>
+					<p>{{comment}}</p>
+				</div>
+				<div class="d-flex align-items-center">
+					<p>comment by - {{username}}</p>
+					<p> - {{createdAt}}</p>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+
+	<div class="d-flex ms-4 me-5">
+		<form class="d-flex comment-form" action="/comment/{{id}}" method="POST">
+			<input name="comment" type="text" placeholder="What do you think of this post?">
+			<button type="submit" class="btn btn-outline-secondary btn-sm ms-4 mb-1">Comment</button>
+		</form>
 	</div>
 </div>
 

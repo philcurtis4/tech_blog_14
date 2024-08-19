@@ -10,4 +10,7 @@ router.put('/blog/:postId', blog_controller.editBlogPost);
 //Delete a Blog
 router.delete('/blog/:postId', blog_controller.deleteBlogPost);
 
+//Add Comment
+router.post('/comment/:postId', blog_controller.addComment);
+
 module.exports = router;

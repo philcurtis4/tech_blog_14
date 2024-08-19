@@ -1,4 +1,4 @@
-const {User, Blog} = require('../models');
+const {User, Blog, Comment} = require('../models');
 
 
 module.exports = {
@@ -6,15 +6,18 @@ module.exports = {
 		try {
 			const user = await User.findByPk(req.session.user_id)
 			const allBlogPosts = await Blog.findAll({
-				include: User, // Include the User model to get author information
+				include: [User, {
+					model:  Comment,
+					order: [['createdAt', 'DESC']],
+				}], // Include the User model to get author information
         order: [['createdAt', 'DESC']], // Order the posts by creation date
-				raw: true
+				
 		});
 
-		 
+		 console.log(allBlogPosts.map((blogObj) => blogObj.get({plain: true}).Comments))
 		res.render('homepage', {
 			user: user ? user.get({plain: true}) : false,
-			blogPosts: allBlogPosts,
+			blogPosts: allBlogPosts.map((blogObj) => blogObj.get({plain: true})),
 			title: 'Tech Blog - Homepage'
 		});
 			
